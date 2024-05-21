@@ -1,0 +1,47 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container__frame {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-end;
+    flex: 1 0 0;
+    border-radius: 18px;
+    background: $color-white;
+    box-shadow: 0px 10px 13px -4px rgba(35, 35, 95, 0.19);
+}
+
+.frame_image {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    height: 162px;
+
+    img {
+        width: 144px;
+        height: 144px;
+        flex-shrink: 0;
+    }
+}
+
+.frame_description {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 12px 18px 18px 18px;
+    gap: 10px;
+    background-color: $color-white;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.text {
+    @include font-general;
+    color: $color-app_black;
+    font-size: 18px;
+    text-align: left;
+}

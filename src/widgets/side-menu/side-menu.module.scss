@@ -1,0 +1,43 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 239px;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid $color-extra_light_grey;
+}
+
+.sidebar_frame {
+    @extend .container;
+    justify-content: center;
+    width: 238px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: $color-white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.selected {
+    @extend .sidebar_frame;
+    background: $color-app_green;
+}
+
+.text {
+    @include font-general;
+    color: $color-app_black;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.text_selected {
+    @extend .text;
+    color: $color-white;
+}
